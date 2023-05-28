@@ -1,0 +1,75 @@
+<!-- La segunda página será un formulario de registro para los participantes al congreso que deberá pedir los siguientes datos: 
+•	Nombre completo (campo de texto)
+•	Dirección de correo electrónico (campo de texto)
+•	Número de teléfono (campo de texto)
+•	Ocupación (campo de texto)
+•	Selección de categoría de participación (campo de selección)
+•	Botón de envío del formulario (campo de botón)
+
+Se debe utilizar etiquetas semánticas de HTML para organizar y estructurar el formulario.  Adicionalmente, aplicar estilos CSS para mejorar la apariencia del formulario. -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro al Congreso</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <center>
+      <h1>Congreso Internacional de Estudiantes de Ingeniería Informática</h1>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Sobre el Congreso</a></li>
+          <li><a href="/info.html">Info</a></li>
+          <li><a href="/formulario.html">Registro</a></li>
+        </ul>
+      </nav>
+    </center>
+  </header>
+
+
+  <center>
+    <section id="registration" class="registro">
+      <h2>Formulario de Registro</h2>
+      <form action="procesar_registro.php" method="POST" class="form">
+        <div class="form-rg">
+          <!-- <label for="nombre">Nombre completo:</label> -->
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+        </div>
+        <div class="form-rg">
+          <!-- <label for="email">Correo electrónico:</label> -->
+          <input type="email" id="email" name="email" placeholder="Correo Electronico" required>
+        </div>
+        <div class="form-rg">
+          <!-- <label for="telefono">Número de teléfono:</label> -->
+          <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" required>
+        </div>
+        <div class="form-rg">
+          <!-- <label for="ocupacion">Ocupación:</label> -->
+          <input type="text" id="ocupacion" name="ocupacion" placeholder="Ocupación" required>
+        </div>
+        <div class="form-select">
+          <!-- <label for="categoria">Categoría de participación:</label> -->
+          <select id="categoria" name="categoria" required>
+            <option value="">Seleccione una categoría</option>
+            <option value="Estudiante">Estudiante</option>
+            <option value="Profesional">Profesional</option>
+            <option value="Académico">Académico</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <button type="submit" class="button-form">Enviar registro</button>
+      </form>
+    </section>
+  </center>
+  
+
+  <!-- <footer>
+    <p>&copy; 2023 Congreso Internacional de Estudiantes de Ingeniería Informática</p>
+  </footer> -->
+</body>
+</html>
+ 
